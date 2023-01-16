@@ -64,3 +64,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# After Create a Project
+1. require pusher server
+```
+composer require pusher/pusher-php-server
+```
+![image](https://user-images.githubusercontent.com/46678886/209334354-f69f9d1b-d621-4834-a870-239cf06c8d35.png)
+
+Get your app keys and enter in your project's .env file,edit the *BROADCAST_DRIVER* part, and it will look be like this:
+```
+BROADCAST_DRIVER=pusher
+
+PUSHER_APP_ID=YOUR_APP_ID
+PUSHER_APP_KEY=YOUR_APP_KEY
+PUSHER_APP_SECRET=YOUR_APP_SECRE
+PUSHER_HOST=
+PUSHER_PORT=443
+PUSHER_SCHEME=https
+PUSHER_APP_CLUSTER=YOUR_APP_CLUSTER
+```
+2. require Vue and Laravel Echo
+```
+npm install pusher-js laravel-echo --save
+composer require laravel/ui
+php artisan ui vue
+npm install
+```
